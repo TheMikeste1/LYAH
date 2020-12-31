@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e556ba3c6c643f58b0c79c71f9b165d77a77bd16bfaaf90ebd85b8d7c386dd23
+
+name:           LYAH
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Github username here/LYAH#readme>
+homepage:       https://github.com/TheMikeste1/LYAH#readme
+bug-reports:    https://github.com/TheMikeste1/LYAH/issues
+author:         Author name here
+maintainer:     Author email here
+copyright:      2019 Author name here
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/TheMikeste1/LYAH
+
+library
+  exposed-modules:
+      Lib
+      StartingOut
+      SyntaxInFunctions
+  other-modules:
+      Paths_LYAH
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable LYAH-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_LYAH
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      LYAH
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite LYAH-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_LYAH
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      LYAH
+    , base >=4.7 && <5
+  default-language: Haskell2010
