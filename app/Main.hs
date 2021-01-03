@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Modules as Mod
 
 main :: IO ()
-main = putStrLn "TEST"
+main = putStrLn (Mod.caesarCipher 3 "Heey")  --putStrLn "TEST"
